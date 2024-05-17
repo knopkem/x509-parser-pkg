@@ -3,7 +3,7 @@
   "collaborators": [
     "Michael Knopke <knopkem@gmail.com>"
   ],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "files": [
     "x509_parser_bg.wasm",
     "x509_parser.js",
