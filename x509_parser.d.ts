@@ -4,7 +4,7 @@
 * @param {string} input
 * @returns {Certificate}
 */
-export function parse_certificate(input: string): Certificate;
+export function parseCertificate(input: string): Certificate;
 export interface Certificate {
     tbsCertificate: TBSCertificate;
     signatureAlgorithm: string;
@@ -25,6 +25,7 @@ export interface TBSCertificate {
 export interface Extension {
     critical: boolean;
     value: string;
+    extnID: string;
 }
 
 export interface Signature {
@@ -33,8 +34,8 @@ export interface Signature {
 }
 
 export interface Validity {
-    notBefore: string;
-    notAfter: string;
+    notBefore: number;
+    notAfter: number;
 }
 
 export interface SubjectPublicKeyInfo {

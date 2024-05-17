@@ -100,10 +100,10 @@ function passStringToWasm0(arg, malloc, realloc) {
 * @param {string} input
 * @returns {Certificate}
 */
-module.exports.parse_certificate = function(input) {
+module.exports.parseCertificate = function(input) {
     const ptr0 = passStringToWasm0(input, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
     const len0 = WASM_VECTOR_LEN;
-    const ret = wasm.parse_certificate(ptr0, len0);
+    const ret = wasm.parseCertificate(ptr0, len0);
     return takeObject(ret);
 };
 
